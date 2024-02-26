@@ -1,0 +1,21 @@
+body {
+  background-color: #fff;
+}
+
+.temp {
+  background-color: #cbcdd1;
+}
+
+.page {
+  height: 94.8vh;
+}
+
+.container {
+  height: 100%;
+}
+
+.searchContainer {
+  /* width: 50%; */
+  height: 94.6%;
+  /* margin: 0 auto 0 auto; */
+}
