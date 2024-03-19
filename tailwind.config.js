@@ -12,6 +12,8 @@ module.exports = {
         "button-blue-bg": "#1B66C9",
         "button-text": "#73406C",
         "button-text-light": "#FFFFFF",
+        "link-text": "#6EB4F8",
+        "link-text-clicked": "#BB8AF9",
         "footer-bg": "#F2F2F2",
       },
     },

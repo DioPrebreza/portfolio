@@ -5,10 +5,25 @@ import InfoCard from "../components/UI/InfoCard";
 import Lightbox from "../components/Lightbox";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import SearchResult from "../components/UI/SearchResult";
+import QuestionTabs from "../components/UI/QuestionTabs";
 
-const images = [
-  { src: require("../assets/images/google-logo.png") },
-  { src: require("../assets/images/placeholder-person.jpg") },
+const questions = [
+  {
+    id: 1,
+    question: "question question question",
+    answer: "answer answer answer",
+  },
+  {
+    id: 2,
+    question: "question question question",
+    answer: "answer answer answer",
+  },
+  {
+    id: 3,
+    question: "question question question",
+    answer: "answer answer answer",
+  },
 ];
 
 const Results = () => {
@@ -22,6 +37,8 @@ const Results = () => {
   const handleIndexChange = (imgIndex) => {
     setCurrentIndex(imgIndex);
   };
+
+  const handleQuestionClick = (e) => {};
 
   const ageDescription = (
     <>
@@ -94,9 +111,59 @@ const Results = () => {
         </div>
         <div id="divider" class="w-4/6 h-[1px] my-6 bg-gray-200 "></div>
         <div class="w-full flex justify-between">
-          <div class="w-1/2">results</div>
-          <div id="divider" class="w-[1px] h-96 bg-gray-200"></div>
           <div class="w-1/2">
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+            <div class="my-8">
+              <p class="text-2xl font-semibold">People mostly ask</p>
+              {questions.map((curQuestion) => {
+                return (
+                  <QuestionTabs
+                    key={curQuestion.id}
+                    question={curQuestion.question}
+                    answer={curQuestion.answer}
+                    onClick={handleQuestionClick}
+                  />
+                );
+              })}
+            </div>
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+            <SearchResult
+              linkTitle={"long title ooga booga monki"}
+              linkDescription={
+                "description about how i am in pain and need a new job holy fuck please work portfolio"
+              }
+            />
+          </div>
+          <div id="divider" class="w-[1px] h-96 bg-gray-200"></div>
+          <div class="w-1/2 mb-10">
             <div class="ml-4 w-1/2">
               <p class="text-xl font-semibold">About</p>
               <p class="mt-6">
@@ -123,10 +190,42 @@ const Results = () => {
               </p>
               <p class="font-semibold">Interests:</p>
               <p class="mb-2">
-                Keeping up with all the new technology in the Website and Mobile
-                app development space, Keeping up with all space news, Learning
-                more about a subject that interests me at the time
+                Keeping up with all the new technology in Website and Mobile app
+                development, Keeping up with all outer space news, also often
+                learning more about a subject that interests me at the time
               </p>
+              <div id="divider" class="w-full h-[1px] my-6 bg-gray-200"></div>
+              <p class="mb-4">Social Media Links:</p>
+              <div class="flex flex-row justify-between">
+                <a href="https://www.linkedin.com/in/dionis-prebreza">
+                  <img
+                    src={require("../assets/images/linkedin.png")}
+                    class="w-14 rounded-full"
+                    alt="linkedin"
+                  />
+                </a>
+                <a href="https://github.com/DioPrebreza">
+                  <img
+                    src={require("../assets/images/github.png")}
+                    class="w-14 rounded-full"
+                    alt="github"
+                  />
+                </a>
+                <a href="https://www.instagram.com/dionis.prebreza/">
+                  <img
+                    src={require("../assets/images/instagram.png")}
+                    class="w-14 rounded-full"
+                    alt="instagram"
+                  />
+                </a>
+                <a href="https://www.facebook.com/denikleo.prebreza/">
+                  <img
+                    src={require("../assets/images/facebook.png")}
+                    class="w-14 rounded-full"
+                    alt="facebook"
+                  />
+                </a>
+              </div>
               <div id="divider" class="w-full h-[1px] my-6 bg-gray-200"></div>
               <p>For my professional skills you are interested in:</p>
               <Link to="/">THE PAGE WHERE SKILLS AT</Link>
