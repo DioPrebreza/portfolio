@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import NavSearch from "../components/NavSearch";
 import InfoCard from "../components/UI/InfoCard";
 import Lightbox from "../components/Lightbox";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const images = [
   { src: require("../assets/images/google-logo.png") },
@@ -90,17 +92,49 @@ const Results = () => {
             </div>
           </div>
         </div>
-        <div id="divider" class="w-4/6 h-[1px] my-6 bg-gray-200"></div>
+        <div id="divider" class="w-4/6 h-[1px] my-6 bg-gray-200 "></div>
         <div class="w-full flex justify-between">
           <div class="w-1/2">results</div>
-          <div id="divider" class="w-[1px] h-12 bg-gray-200"></div>
+          <div id="divider" class="w-[1px] h-96 bg-gray-200"></div>
           <div class="w-1/2">
-            <div class="ml-4">
+            <div class="ml-4 w-1/2">
               <p class="text-xl font-semibold">About</p>
+              <p class="mt-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div id="divider" class="w-full h-[1px] my-6 bg-gray-200"></div>
+              <p class="font-semibold">Occupation:</p>
+              <p class="mb-2">Web/Mobile Developer</p>
+              <p class="font-semibold">Education:</p>
+              <p class="mb-2">
+                Currently pursuing Bachelor's Degree at UBT University
+              </p>
+              <p class="font-semibold">Hobbies:</p>
+              <p class="mb-2">
+                Gaming, Learning guitar, Listening to music, Reading Books,
+                Watching Youtube and Twitch, and maybe sometimes doing anything
+                else when I'm bored :)
+              </p>
+              <p class="font-semibold">Interests:</p>
+              <p class="mb-2">
+                Keeping up with all the new technology in the Website and Mobile
+                app development space, Keeping up with all space news, Learning
+                more about a subject that interests me at the time
+              </p>
+              <div id="divider" class="w-full h-[1px] my-6 bg-gray-200"></div>
+              <p>For my professional skills you are interested in:</p>
+              <Link to="/">THE PAGE WHERE SKILLS AT</Link>
             </div>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
