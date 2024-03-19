@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Searchbar from "./pages/Searchbar";
 import "./App.css";
+import Results from "./pages/Results";
 
 function App() {
   return (
@@ -9,6 +10,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Searchbar />
+          </Route>
+          <Route path="/results" exact>
+            <Results />
           </Route>
         </Switch>
       </BrowserRouter>

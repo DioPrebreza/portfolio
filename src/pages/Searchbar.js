@@ -5,45 +5,14 @@ import Button from "../components/UI/Button";
 import Footer from "../components/Footer";
 
 import classes from "./Searchbar.module.css";
+import { ReactTyped } from "react-typed";
+import NavSearch from "../components/NavSearch";
 
 const Searchbar = () => {
   return (
     <div className={classes.page}>
       <div className="h-12">
-        <div className="w-full h-full flex flex-row flex-wrap content-end justify-end">
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 mr-2 cursor-not-allowed"
-            style={{ marginTop: "2px" }}
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg> */}
-
-          <div style={{ marginTop: "5px" }} class="w-28 text-lg">
-            <Link to="/">Resume here</Link>
-          </div>
-
-          <div
-            style={{ width: "2px", height: "40px" }}
-            class="bg-button-text mr-2"
-          ></div>
-
-          <div className="mr-4">
-            <Button color={"bg-button-blue-bg"} text={"text-button-text-light"}>
-              <div style={{ marginBottom: "2px" }}>
-                <Link to="/"> Contact </Link>
-              </div>
-            </Button>
-          </div>
-        </div>
+        <NavSearch />
       </div>
       <div className={classes.container}>
         <div
@@ -58,15 +27,15 @@ const Searchbar = () => {
               />
             </div>
             <div className="w-5/6 h-12 mx-auto search-bar border border-border-light-bg rounded-full flex content-center justify-between flex-wrap">
-              <div>
-                <Link to="/">
+              <div className="flex">
+                <Link to="/results">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}
                     stroke="currentColor"
-                    className="w-6 h-6 ml-4"
+                    class="w-5 h-5 ml-4 mt-[2.5px]"
                   >
                     <path
                       strokeLinecap="round"
@@ -75,6 +44,20 @@ const Searchbar = () => {
                     />
                   </svg>
                 </Link>
+                <div className="ml-4">
+                  <ReactTyped
+                    className={classes.autoType}
+                    strings={[
+                      "dionos",
+                      "dionis o",
+                      "dionis preberza",
+                      "dionis prebreza about and prio",
+                      "dionis prebreza about and projects",
+                    ]}
+                    typeSpeed={60}
+                    backSpeed={40}
+                  />
+                </div>
               </div>
               <div class="flex flex-row">
                 <svg
@@ -83,7 +66,7 @@ const Searchbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 mr-2 cursor-not-allowed"
+                  className="w-5 h-5 mt-[2.5px] mr-4 cursor-not-allowed"
                 >
                   <path
                     strokeLinecap="round"
@@ -97,7 +80,7 @@ const Searchbar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="w-6 h-6 mr-4 cursor-not-allowed"
+                  className="w-5 h-5 mr-4 mt-[2.5px] cursor-not-allowed"
                 >
                   <path
                     strokeLinecap="round"
@@ -114,10 +97,10 @@ const Searchbar = () => {
             </div>
             <div className="buttons mx-auto mt-6 grid grid-cols-1 md:grid-cols-2 gap-x-4">
               <Button color={"bg-button-bg"} text={"text-button-text"}>
-                Click here
+                <Link to="/results">Click here</Link>
               </Button>
               <Button color={"bg-button-bg"} text={"text-button-text"}>
-                Or here
+                <Link to="/results">Or Here</Link>
               </Button>
             </div>
           </div>

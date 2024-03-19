@@ -19,3 +19,10 @@ body {
   height: 94.6%;
   /* margin: 0 auto 0 auto; */
 }
+
+.autoType {
+}
+
+.autoType span {
+  font-size: 1.1rem;
+}
