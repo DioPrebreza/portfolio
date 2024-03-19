@@ -15,14 +15,14 @@ const NavSearch = () => {
         <div class="w-3/4">
           <div className={`${classes.searchContainer} "flex"`}>
             <div className="flex flex-row w-full">
-              <div className="image w-[300px] mt-6 mb-8">
+              <div className="image w-[300px] mt-6 mb-8 ml-8">
                 <img
                   src={require("../assets/images/google-logo.png")}
                   alt="google-logo"
                   className="w-full"
                 />
               </div>
-              <div className="w-[700px] h-12  mt-6 mb-6 ml-6 search-bar border border-border-light-bg rounded-full flex content-center justify-between flex-wrap">
+              <div className="w-[700px] h-12 my-auto ml-10 search-bar border border-border-light-bg rounded-full flex content-center justify-between flex-wrap">
                 <div className="flex">
                   <div className="ml-4">
                     <p class="text-lg pb-[2px]">
